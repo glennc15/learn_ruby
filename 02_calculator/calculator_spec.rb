@@ -79,21 +79,83 @@ end
 
 describe "#multiply" do
 
-  it "multiplies two numbers"
+  it "multiplies 0 and 0" do
+    multiply(0,0).should == 0
+  end
 
-  it "multiplies several numbers"
+  it "multiplies 5 and 0" do
+    multiply(5,0).should == 0
+  end
 
+  it "multiplies 0 and 5" do
+    multiply(0,5).should == 0
+  end
+
+  it "multiplies 2 and 5" do
+    multiply(2,5).should == 10
+  end
+
+  it "multiplies 5 and 5" do
+    multiply(5,5).should == 25
+  end
+
+  it "multiplies -5 and 5" do
+    multiply(-5,5).should == -25
+  end
+
+  it "multiplies 5 and -5" do
+    multiply(5,-5).should == -25
+  end  
+
+  it "multiplies 9*8*7*6*5*4*3*2*1" do
+    multiply(9, 8, 7, 6, 5, 4, 3, 2, 1).should == 362880
+  end
+
+  it "multiplies 9*8*7*6*5*0*3*2*1" do
+    multiply(9, 8, 7, 6, 5, 0, 3, 2, 1).should == 0
+  end
 end
 
 describe "#power" do
-  it "raises one number to the power of another number"
+  it "raises 3 to the power of 2" do
+    power(3, 2).should == 9
+  end
+
+  it "raises 3 to the power of 3" do
+    power(3, 3).should == 27
+  end
+
+  it "raises 3 to the power of -3" do
+    power(3, -3).should == 1.0/27.0
+  end
+
+  it "raises 3 to the power of 0" do
+    power(3, 0).should == 1
+  end
+
+
 end
 
 # http://en.wikipedia.org/wiki/Factorial
 describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+  it "computes the factorial of 0" do
+    factorial(0).should == 1
+  end
+
+  it "computes the factorial of 1" do
+    factorial(1).should == 1
+  end
+
+  it "computes the factorial of 2" do
+    factorial(2).should == 2
+  end
+
+  it "computes the factorial of 5" do
+    factorial(5).should == 120
+  end
+
+  it "computes the factorial of 10" do
+    factorial(10).should == 3628800
+  end
+
 end
