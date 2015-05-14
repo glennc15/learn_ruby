@@ -87,14 +87,3 @@ def translate (*words)
 	pig_latin_translation[0..-2]
 end 
 
-# puts "banana: " + translate("banana").to_s
-# puts "carl: " + translate("carl").to_s
-# puts "cherry: " + translate("cherry").to_s
-# puts "Apple: " + translate("Apple").to_s
-# puts "apple: " + translate("apple").to_s
-# puts "quiet: " + translate("quiet").to_s
-# puts "Quiet: " + translate("Quiet").to_s
-
-# puts translate("eat pie")
-
-# puts "quiet".index('iu').to_s
